@@ -1,0 +1,103 @@
+.containerMUL {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 20px auto;
+    border: 2px solid black;
+    background-color: white;
+    padding: 20 px;
+    overflow: auto; /* Activar barras de desplazamiento si es necesario */
+}
+
+.containerGrid {
+    display: flex; /* Utilizamos flexbox para el diseño flexible */
+    width: 100%; /* Ancho total del contenedor */
+    margin: 2px 0;
+
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+[class*="-column"] {
+    border: 1px solid transparent;
+}
+
+.left-column{
+    width: 7%;
+    min-width: 20px;
+}
+
+.center-column {
+    width: 86.5%;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+.right-column {
+    width: 6.5%;
+    min-width: 20px;
+}
+
+[class*="tdCell_"] {
+    height: 40px;
+    text-align: center;
+    margin-top: auto;
+    border-top: 15px solid transparent;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    z-index: 100;
+}
+
+@media screen and (max-width: 1000px) {
+    [class*="tdCell_"] {
+        height: 40px;
+        text-align: center;
+        margin-top: auto;
+        border-top: 20px solid transparent;
+        font-family: Comic Sans MS;
+        font-size: 14px;
+        font-weight: bold;
+        float: left;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    [class*="tdCell_"] {
+        height: 40px;
+        text-align: center;
+        margin-top: auto;
+        border-top: 25px solid transparent;
+        font-family: Comic Sans MS;
+        font-size: 10px;
+        float: left;
+        z-index: 100;
+    }
+}
+
+.tdCell_L {
+    background-color: #8A8A8A;
+    width: 3.0769%;
+}
+
+.tdCell_S {
+    background-color: #8A8A8A;
+    width: 0.7692%;
+    border-bottom: 4px solid red;
+}
+
+.imgMUL {
+    position: relative;
+    display: block;
+    width: 100%; 
+    margin: 0px 0px -45px 0px ;
+    z-index: 999; /* Asigna un z-index alto para que la imagen esté siempre al frente */
+}
